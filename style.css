@@ -1,217 +1,103 @@
+css
 body {
-font-family: helvetica;
-background-image: linear-gradient(to right, #4C00E7, #A02FE8);
-background-color: #1C0B36;
--webkit-touch-callout: none;
-user-select: none;
--webkit-user-select: none;
--khtml-user-select: none;
--moz-user-select: none;
--ms-user-select: none;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #ffffff;
 }
-a {
-text-decoration: none;
+
+.container {
+    width: 80%;
+    margin: 0 auto;
 }
-@supports (
-  (-webkit-backdrop-filter: blur(20px)) or (backdrop-filter: blur(20px))
-) {
-  .top {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    color: rgb(255,255,255,.6);
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 4%;
-    -webkit-backdrop-filter: blur(20px);
-    backdrop-filter: blur(20px);
-  }
+
+header {
+    background-color: #1e1e1e;
+    padding: 20px 0;
 }
-.top h1 {
-position: fixed;
-top: 5px;
-left: 55px;
-font-size: 25px;
-color: #fff;
-}
-.top Img {
-width: 30px;
-height: 30px;
-border-radius: 23.3%;
-margin-left: 20px; 
-}
-@supports (
-  (-webkit-backdrop-filter: blur(20px)) or (backdrop-filter: blur(20px))
-) {
-  .name {
-    position: fixed;
-    left: 0%;
-    top: 0px;
-    width: 100%;
-    height: 7%;
-    color: rgb(255,255,255,.6);
-    -webkit-backdrop-filter: saturate(180%) blur(20px);
-    backdrop-filter: saturate(180%) blur(20px);
-  }
-}
-.name h1 {
-color: #fff;
-font-size: 20px;
-text-align: center;
-}
-.name a {
-text-decoration: none;
-color: #ffffff;
-font-size: 39px;
-font-family: Framework7 Icons;
--webkit-appearance: none;
-color: #ffffff;
-float: left;
-margin-top: 7px;
-margin-bottom: 0px;
-}
-@font-face {
-font-family: Framework7 Icons;
-src: url(https://kasarkhatari.github.io/fonts/Framework7Icons-Regular.woff2);
-}
-@supports (
-  (-webkit-backdrop-filter: blur(20px)) or (backdrop-filter: blur(20px))
-) {
-  .nav {
-    font-family: Framework7 Icons;
-    justify-content: center;
-    position: fixed;
-    bottom: 0px;
-    z-index: 99;
+
+header h1 {
+    margin: 0;
     text-align: center;
-    padding: 15px;
-    margin-bottom: 10px;
-    left: 13%;
-    width: 65%;
-    border-radius: 20px;
-    background: rgba(0, 0, 0, 0.6);
-    -webkit-backdrop-filter: saturate(180%) blur(20px);
-    backdrop-filter: saturate(180%) blur(20px);
-  }
 }
-.nav a:hover {
-color: #1C0B36;
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
 }
-.nav a {
-font-size: 45px;
-color: #EBEBEB;
-margin: 14.5px;
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
 }
-.pages {	
-width: 85%;
-padding: 8px;
-border-radius: 15px;
-background: #EBEBEB;
-height: 45px;
-margin: 10px;
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
 }
-.pages img {
-float: left;
-width: 39px;
-border-radius: 23.3%;
+
+.hero {
+    text-align: center;
+    padding: 100px 0;
+    background: url('hero-background.jpg') no-repeat center center/cover;
 }
-.pages h1 {
-font-size: 17px;
-color: #000;
-text-align: justify;
-margin-top: 2px;
-margin-bottom: 0px;
-margin-left: 60px;
+
+.hero h2 {
+    margin: 0;
+    font-size: 3em;
 }
-.card-devs {
-background: linear-gradient(45deg, rgba(255,255,255,.1) 0%, rgba(255,255,255,.6) 100%);
-width: 85%;
-display: inline-block;
-border-radius: 20px;
-margin: 10px;
+
+.hero p {
+    font-size: 1.2em;
 }
-.card-devs h2 {
-color: #1C0B36;
-font-weight: 800;
-text-align: justify;
-margin-left: 20px;
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #ff4500;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
 }
-.card-devs p {
-color: #1C0B36;
-font-weight: 400;
-text-align: justify;
-margin-left: 20px;
-margin-right: 20px;
+
+.games {
+    padding: 50px 0;
 }
-.card-devs img {
-width: 120px;
-border-radius: 60px;
-margin: 15px;
+
+.games h2 {
+    text-align: center;
+    font-size: 2.5em;
 }
-.card-devs a {
-color: #fff;
-display: block;
-width: 120px;
-padding-top: 10px;
-padding-bottom: 10px;
-border-radius: 10px;
-background-color: #1C0B36;
-margin: 10px;
+
+.game-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
-.apps {
-width: 85%;
-padding: 8px;
-border-radius: 15px;
-background: #EBEBEB;
-height: 45px;
-margin: 10px;
+
+.game {
+    background-color: #1e1e1e;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    width: 30%;
+    text-align: center;
 }
-.apps img {
-float: left;
-width: 45px;
-border-radius: 23.3%;
+
+.game img {
+    max-width: 100%;
+    border-radius: 10px;
 }
-.apps a {
-color: #ffffff;
-display: block;
-float: right;
-width: 60px;
-border-radius: 30px;
-padding-top: 7px;
-padding-bottom: 7px;
-background-color: #1F5FBF;
-font-size: 14px;
-font-weight: 700;
-text-align: center;
--webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-text-decoration: none;
+
+footer {
+    background-color: #1e1e1e;
+    padding: 20px 0;
+    text-align: center;
 }
-.apps h1 {
-font-size: 17px;
-color: #000;
-text-align: justify;
-margin-top: 2px;
-margin-bottom: 0px;
-margin-left: 60px;
-}
-#myInput {	
-background-position: 10px 12px;
-background-repeat: no-repeat;
-width: 70%;
-height: 2%;
-font-size: 16px;
-padding: 9px 17px 9px 37px;
-margin-bottom: 9px;
-margin: 10px;
-border-radius:20px;
-background-color: #EBEBEB;
-color: #fff;
-border: 5px solid #EBEBEB;
-}
-#myUL {
-/* Remove default list styling */
-list-style-type: none;
-padding: 0;
-margin: 0;
+
+footer p {
+    margin: 0;
 }
