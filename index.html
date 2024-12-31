@@ -1,64 +1,105 @@
-html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gaming Hub</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Kimhong & Kylie - Anniversary</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #ffcccc, #ffe6e6);
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            text-align: center;
+            padding: 20px;
+            background: #ff9999;
+            color: white;
+        }
+        header h1 {
+            font-size: 3rem;
+        }
+        section {
+            padding: 20px;
+            text-align: center;
+        }
+        .gallery img {
+            width: 200px;
+            height: 150px;
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .love-letter {
+            background: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px auto;
+            width: 80%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        footer {
+            text-align: center;
+            background: #ff9999;
+            color: white;
+            padding: 10px;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <div class="container">
-            <h1>Gaming Hub</h1>
-            <nav>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Games</a></li>
-                    <li><a href="#">News</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
+        <h1>Happy Anniversary, Kylie & Kimhong!</h1>
+        <p>A love story worth celebrating</p>
     </header>
 
-    <main>
-        <section class="hero">
-            <div class="container">
-                <h2>Welcome to the Ultimate Gaming Experience</h2>
-                <p>Join our community and stay updated with the latest gaming news and releases.</p>
-                <a href="#" class="btn">Get Started</a>
-            </div>
-        </section>
+    <section>
+        <h2>Our Story</h2>
+        <p>From the moment we met, our journey together has been filled with love, joy, and unforgettable moments.</p>
+    </section>
 
-        <section class="games">
-            <div class="container">
-                <h2>Popular Games</h2>
-                <div class="game-list">
-                    <div class="game">
-                        <img src="game1.jpg" alt="Game 1">
-                        <h3>Game Title 1</h3>
-                        <p>Short description of the game.</p>
-                    </div>
-                    <div class="game">
-                        <img src="game2.jpg" alt="Game 2">
-                        <h3>Game Title 2</h3>
-                        <p>Short description of the game.</p>
-                    </div>
-                    <div class="game">
-                        <img src="game3.jpg" alt="Game 3">
-                        <h3>Game Title 3</h3>
-                        <p>Short description of the game.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
+    <section class="gallery">
+        <h2>Memorable Moments</h2>
+        <img src="photo1.jpg" alt="Moment 1">
+        <img src="photo2.jpg" alt="Moment 2">
+        <img src="photo3.jpg" alt="Moment 3">
+    </section>
+
+    <section>
+        <h2>A Love Letter to Kylie</h2>
+        <div class="love-letter">
+            <p>Dear Kylie,</p>
+            <p>Happy anniversary! Every day with you is a gift. You make my life brighter, and I’m so grateful for all the love and happiness we share. Here's to us, forever and always.</p>
+            <p>Love, Kimhong</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>Countdown to Celebration</h2>
+        <p>Our next milestone is just around the corner!</p>
+        <div id="countdown"></div>
+    </section>
 
     <footer>
-        <div class="container">
-            <p>&copy; 2024 Gaming Hub. All rights reserved.</p>
-        </div>
+        <p>With all my love, Kimhong</p>
     </footer>
+
+    <script>
+        const countdownElement = document.getElementById('countdown');
+        const anniversaryDate = new Date('2024-12-31').getTime();
+
+        setInterval(() => {
+            const now = new Date().getTime();
+            const timeLeft = anniversaryDate - now;
+
+            const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+            countdownElement.innerHTML = `${days} Days ${hours} Hours ${minutes} Minutes ${seconds} Seconds`;
+        }, 1000);
+    </script>
 </body>
 </html>
